@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Menu | Cham – Santa Maria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <style>
+        :root{--navy:#0a1928;--gold:#d4af37;--white:#fff;--gray:#5a6a7a;--font-head:'Playfair Display',serif;--font-body:'Poppins',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:var(--white)}
+        .container{max-width:1280px;margin:0 auto;padding:0 24px}
+        .btn{background:var(--gold);color:var(--navy);padding:12px 30px;border-radius:50px;text-decoration:none;display:inline-block;font-weight:600}
+        .nav{position:fixed;width:100%;top:0;z-index:1000;padding:20px 0;background:transparent}
+        .nav-scrolled{background:var(--navy);padding:12px 0}
+        .nav .container{display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:1.8rem;font-weight:700;font-family:var(--font-head);color:white;text-decoration:none}
+        .logo span{color:var(--gold)}
+        .nav-links{display:flex;gap:2rem;list-style:none}
+        .nav-links a{color:white;text-decoration:none;font-weight:500}
+        .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+        .mobile-menu{display:none;font-size:1.8rem;color:white;background:none;border:none;cursor:pointer}
+        .menu-hero{height:45vh;background:linear-gradient(rgba(10,25,40,0.6),rgba(10,25,40,0.7)),url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') no-repeat center/cover;display:flex;align-items:center;text-align:center;color:white}
+        .menu-hero h1{font-size:3.5rem}
+        .category-title{font-size:2.2rem;color:var(--navy);margin:60px 0 20px;text-align:center}.category-title span{color:var(--gold)}
+        .menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:35px;margin-bottom:80px}
+        .menu-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 20px rgba(0,0,0,0.05);transition:all 0.3s}
+        .menu-card:hover{transform:translateY(-6px);box-shadow:0 20px 35px rgba(0,0,0,0.1)}
+        .menu-card-img{height:220px;overflow:hidden}
+        .menu-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s}
+        .menu-card:hover .menu-card-img img{transform:scale(1.03)}
+        .menu-card-content{padding:20px}
+        .menu-card-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+        .menu-card-header h3{font-size:1.2rem;font-weight:600}
+        .price{color:var(--gold);font-weight:700;font-size:1.1rem}
+        .desc{color:var(--gray);font-size:0.85rem;line-height:1.4}
+        .footer{background:var(--navy);color:white;text-align:center;padding:40px 0}
+        @media(max-width:768px){.mobile-menu{display:block}.nav-links{position:fixed;top:70px;left:-100%;width:80%;height:calc(100vh - 70px);background:var(--navy);flex-direction:column;align-items:center;padding-top:40px;transition:left 0.3s}.nav-links.active{left:0}.menu-hero h1{font-size:2rem}.menu-grid{grid-template-columns:1fr}}
+    </style>
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <nav class="nav"><div class="container"><a href="index.html" class="logo">Cham<span>.</span></a><button class="mobile-menu">☰</button><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="menu.html" class="active">Menu</a></li><li><a href="reservation.html">Reservation</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav>
+    <section class="menu-hero"><div class="container"><h1>Our Menu</h1><p>Fresh from the Atlantic, crafted with passion</p></div></section>
+    <div class="container">
+        <!-- Appetizers -->
+        <h2 class="category-title"><span>✦</span> Starters <span>✦</span></h2>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cham Samosas"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Cham Samosas</h3><span class="price">€8</span></div><div class="desc">Spiced tuna & potato, crispy pastry, tamarind dip</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Grilled Octopus"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Grilled Octopus</h3><span class="price">€18</span></div><div class="desc">Lemon, herbs, garlic, olive oil</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cape Verdean Ceviche"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Cape Verdean Ceviche</h3><span class="price">€14</span></div><div class="desc">Fresh local fish, lime, coconut milk, chili</div></div></div>
+        </div>
+
+        <!-- Seafood Specialties -->
+        <h2 class="category-title"><span>✦</span> Seafood Specialties <span>✦</span></h2>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1569058242567-97a2b9c3a1b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Grilled Lobster"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Grilled Lobster</h3><span class="price">€45</span></div><div class="desc">Fresh lobster, garlic butter, herbs</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Seafood Cataplana"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Seafood Cataplana</h3><span class="price">€38</span></div><div class="desc">Slow-cooked seafood stew with clams, shrimp, fish, rice</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Zambujica"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Zambujica (Local White Fish)</h3><span class="price">€28</span></div><div class="desc">Grilled with lime, chili, and local spices</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Grilled Tiger Prawns"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Grilled Tiger Prawns</h3><span class="price">€32</span></div><div class="desc">Garlic, chili, lemon, served with coconut rice</div></div></div>
+        </div>
+
+        <!-- Meat & Poultry -->
+        <h2 class="category-title"><span>✦</span> Meat & Poultry <span>✦</span></h2>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Piri Piri Chicken"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Piri Piri Chicken</h3><span class="price">€22</span></div><div class="desc">Marinated in malagueta sauce, grilled to perfection</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1534352956036-cd81e27dd615?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Beef Tenderloin"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Beef Tenderloin</h3><span class="price">€34</span></div><div class="desc">Grilled with red wine reduction, seasonal vegetables</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Catchupa Rica"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Catchupa Rica</h3><span class="price">€19</span></div><div class="desc">Traditional Cape Verdean slow-cooked corn, beans, meats</div></div></div>
+        </div>
+
+        <!-- Desserts -->
+        <h2 class="category-title"><span>✦</span> Desserts <span>✦</span></h2>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Bolo de Mel"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Bolo de Mel</h3><span class="price">€7</span></div><div class="desc">Traditional honey cake with nuts and spices</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Papaya Jam & Cheese"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Papaya Jam & Local Cheese</h3><span class="price">€6</span></div><div class="desc">Sweet and savory traditional combination</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1574085733277-851f9d5f5e5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Coconut Pudding"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Coconut Pudding</h3><span class="price">€7</span></div><div class="desc">Creamy coconut pudding with caramel sauce</div></div></div>
+        </div>
+
+        <!-- Cocktails & Drinks -->
+        <h2 class="category-title"><span>✦</span> Cocktails & Drinks <span>✦</span></h2>
+        <div class="menu-grid">
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cham Sunset"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Cham Sunset</h3><span class="price">€10</span></div><div class="desc">Signature cocktail – rum, passion fruit, orange blossom</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Local Grogue"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Local Grogue Tasting</h3><span class="price">€12</span></div><div class="desc">Three artisanal sugarcane rums</div></div></div>
+            <div class="menu-card"><div class="menu-card-img"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Fresh Coconut Water"></div><div class="menu-card-content"><div class="menu-card-header"><h3>Fresh Coconut Water</h3><span class="price">€5</span></div><div class="desc">Straight from the island</div></div></div>
+        </div>
+    </div>
+    <footer class="footer"><div class="container"><p>© 2025 Cham – Santa Maria, Cape Verde | +238 913 98 48</p></div></footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
